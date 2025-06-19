@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Post</title>
+</head>
+<style>
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.post-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f8b0c8; /* Light pink background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+    color: maroon;
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+.form-info {
+    margin-bottom: 10px;
+    text-align:center;
+    font-style: italic;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #ff4081; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e91e63;
+}
+
+</style>
+<body>
+
+    <h1 class="form-heading">Edit Your Post</h1>
+    <h3 class="form-info">Post ID: <%= post.id %></h3>
+    <h3 class="form-info">Post Username: @<%= post.username %></h3>
+        
+    <div class="post-form">
+        <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+            <textarea id="content" name="content" class="form-textarea" placeholder="Edit your post..."><%= post.content %></textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

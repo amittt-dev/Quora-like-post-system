@@ -1,0 +1,82 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: maroon;
+    margin-bottom: 40px;
+}
+
+.post {
+    background-color: #f8b0c8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user {
+    color: #0077cc;
+    margin: 0;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+.content {
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.5em;
+}
+
+.create-post-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white;              
+    text-decoration: none;     
+    border-radius: 5px;        
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left:43%;
+}
+
+.create-post-btn:hover {
+    background-color: #139c1a; 
+}
+
+.create-posts-btn{
+    display: inline-block;
+    padding: 10px 15px;
+    background-color:#fe4e8f; 
+    color: white;             
+    text-decoration: none;     
+    border-radius: 5px;        
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.create-posts-btn:hover {
+    background-color: #fe3f7f; 
+}
+
+.delete-btn{
+    padding: 10px 15px;
+    background-color: #f7105d; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover{
+    background-color:#cf0448
+}

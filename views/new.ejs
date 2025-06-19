@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="new.css">
+    <title>Create a new Post</title>
+</head>
+<style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.post-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f8b0c8; /* Light pink background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #ff4081; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e91e63;
+}
+h1{
+    color:maroon;
+    text-align:center;
+}
+
+</style>
+<body>
+    <h1>Create Your New Post</h1>
+    <form method="post" action="/posts" class="post-form">
+        <input type="text" placeholder="Enter username" name="username" class="form-input"><br><br>
+        <textarea placeholder="Write your post..." name="content" class="form-textarea"></textarea><br>
+        <button type="submit" class="submit-btn">Submit Post</button>
+    </form>
+
+</body>
+</html>

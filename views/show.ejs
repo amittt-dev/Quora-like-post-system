@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts in details</title>
+</head>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.heading {
+    color: maroon;
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.post-id {
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+}
+
+.post {
+    background-color: #f8b0c8;
+    /* 🌸 Changed */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user {
+    color: #0077cc;
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.content {
+    color: #444;
+    margin-top: 10px;
+    line-height: 1.5em;
+}
+
+</style>
+<body>
+    <h1 class="heading">Here is your post in detail</h1>
+
+    <p class="post-id"> Post ID : <%= post.id %></p>
+
+    <div class="post">
+        <h3 class="user"> @<%= post.username %></h3>
+        <h4 class="content"> <%= post.content %></h4>
+    </div>
+
+</body>
+</html>
